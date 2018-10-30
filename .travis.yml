@@ -36,7 +36,7 @@ script:
 #notifications:
 #  email:
 #    recipients:
-#      - rails-bootstrap-dev@wolox.com.ar
+#      - rails-bootstrap-dev@wolox.com.ar 
 
 cache:
   bundler: true
