@@ -30,13 +30,13 @@ before_script:
   - bundle exec rake db:migrate
 
 script:
-  - bundle exec rspec spec -fd
+ # - bundle exec rspec spec -fd
   - bundle exec rubocop app spec -R --format simple
 
 #notifications:
 #  email:
-#    recipients:
-#      - rails-bootstrap-dev@wolox.com.ar 
+#  recipients:
+#  -rails-bootstrap-dev@wolox.com.ar
 
 cache:
   bundler: true
