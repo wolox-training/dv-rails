@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
->>>>>>> d3ac035... correction of
 require 'fileutils'
 include FileUtils
 
