@@ -83,11 +83,7 @@ GEM
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
-<<<<<<< HEAD
     jaro_winkler (1.5.1)
-=======
-    jaro_winkler (1.5.1-x86_64-darwin-17)
->>>>>>> d3ac035... correction of
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
