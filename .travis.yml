@@ -1,5 +1,7 @@
 language: ruby
 
+rvm:
+  - 2.5.3
 env:
   global:
     - RUBY_GC_MALLOC_LIMIT=90000000
@@ -20,7 +22,6 @@ before_script:
   - bundle exec rake db:migrate
 
 script:
- # - bundle exec rspec spec -fd
   - bundle exec rubocop app spec -R --format simple
 
 cache:
