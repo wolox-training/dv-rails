@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_11_07_213227) do
     t.string "author", default: "", null: false
     t.string "image", default: "", null: false
     t.string "title", default: "", null: false
-    t.string "publischer", default: "", null: false
+    t.string "publisher", default: "", null: false
     t.string "year", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
