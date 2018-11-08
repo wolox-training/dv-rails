@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string :author, null: false, default: ""
       t.string :image, null: false, default: ""
       t.string :title, null: false, default: ""
-      t.string :publischer, null: false, default: ""
+      t.string :publisher, null: false, default: ""
       t.string :year, null: false, default: ""
       t.timestamps
     end
