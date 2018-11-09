@@ -33,6 +33,7 @@ gem 'rubocop', '~> 0.60.0', require: false
 gem 'omniauth'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -59,7 +60,10 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
+  gem 'rspec-rails', '~> 3.8'
   gem 'chromedriver-helper'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing' # If you are using Rails 5.x
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
