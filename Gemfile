@@ -33,7 +33,7 @@ gem 'rubocop', '~> 0.60.0', require: false
 gem 'omniauth'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker', '~> 1.9.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
