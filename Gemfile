@@ -35,6 +35,7 @@ gem 'omniauth'
 # gem 'capistrano-rails', group: :development
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
+gem 'active_model_serializers', '~> 0.10.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
