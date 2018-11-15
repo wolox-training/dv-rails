@@ -1,12 +1,15 @@
 class BooksController < ApplicationController
   include Wor::Paginate
+
   def show
     @book = Book.find(params[:id])
     render json: @book, serializer: BookSerializer
+  rescue StandardError => e
+    render json: { error: "El libro con el id #{e.id} no existe" }, status: :not_found
   end
 
   def index
-    @book = Book.all
-    render_paginated @book
+    @books = Book.all
+    render_paginated @books
   end
 end
