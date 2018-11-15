@@ -4,8 +4,8 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     render json: @book, serializer: BookSerializer
-  rescue StandardError => e
-    render json: { error: "El libro con el id #{e.id} no existe" }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "El libro con el id #{params[:id]} no existe" }, status: :not_found
   end
 
   def index
