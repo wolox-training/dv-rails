@@ -5,7 +5,7 @@ describe BooksController do
     subject(:http_request) do
       get :index
     end
-    
+
     let!(:books) { create_list(:book, 70) }
 
     it 'responses with the books json' do
@@ -21,7 +21,7 @@ describe BooksController do
     subject(:http_request) do
       get :show, params: { id: id }
     end
-    
+
     let(:book) { create(:book) }
 
     context 'When fetching a specific book' do
@@ -39,7 +39,7 @@ describe BooksController do
     end
 
     context 'When fetching a book that not exist' do
-      let(:id) { -1 } 
+      let(:id) { -1 }
 
       it 'responds with 404 if the book do not founded ' do
         expect(http_request).to have_http_status(:not_found)
