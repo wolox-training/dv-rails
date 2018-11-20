@@ -34,6 +34,8 @@ gem 'omniauth'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'faker', '~> 1.9.1'
+gem 'wor-paginate'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

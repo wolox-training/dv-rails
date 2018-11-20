@@ -5,6 +5,7 @@ describe Book, type: :model do
     Book.new(genre: genre, author: author, image: image,
              title: title, publisher: publisher, year: year)
   end
+
   let(:genre)            { Faker::Book.genre }
   let(:author)           { Faker::Book.author }
   let(:image)            { Faker::File.file_name('path/to') }
