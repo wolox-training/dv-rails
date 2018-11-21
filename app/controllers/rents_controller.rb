@@ -1,7 +1,6 @@
 class RentsController < ApplicationController
   include Wor::Paginate
   def create
-    # byebug
     @rent = Rent.new(rent_params)
     if @rent.save
       render json: @rent
