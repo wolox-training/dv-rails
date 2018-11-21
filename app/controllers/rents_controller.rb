@@ -9,6 +9,7 @@ class RentsController < ApplicationController
       render json: { error: @rent.errors.messages }, status: :unprocessable_entity
     end
   end
+
   def index
     @rents = Rent.where(user_id: params[:user_id])
     render_paginated @rents
