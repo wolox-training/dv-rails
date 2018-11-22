@@ -39,13 +39,14 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'sidekiq', '~> 5.2.3'
 # se usa intslata la ge,a de rubocop emn el proyecto
 gem 'rubocop', '~> 0.60.0', require: false
 gem 'factory_bot_rails', '~> 4.11'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do
