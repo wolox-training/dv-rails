@@ -1,10 +1,8 @@
-<h1>Rent#send</h1>
-<p>
-  Hi <%= @rent.user.first_name %>, find me in app/views/rent_mailer/send.html.erb
-  <%= @rent.start_date %>
-  <%= @rent.end_date %>
-  <%= @current_date %>  
-  <%= @rent.book.title %>
-  <%= @rent.book.genre %>
-  <%= @rent.book.author %>
-</p>
+<h1>Rent book</h1>
+<h2> <%= I18n.t 'greeting' %> : <%= @rent.user.first_name %></h2>
+<h4> <%= I18n.t 'start_date' %> : <%= @rent.start_date %></h4>
+<h4> <%= I18n.t 'end_date' %> : <%= @rent.end_date %></h4>
+<h4> <%= I18n.t 'current_date' %> : <%= @current_date %> </h4>
+<h4> <%= I18n.t 'book_title' %> : <%= @rent.book.title %></h4>
+<h4> <%= I18n.t 'book_genre' %>: <%= @rent.book.genre %></h4>
+<h4> <%= I18n.t 'book_author' %> : <%= @rent.book.author %></h4>

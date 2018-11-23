@@ -1,0 +1,8 @@
+es:
+  greeting: "Hola"
+  start_date: "Fecha de inicio"
+  end_date: "Fecha final"
+  current_date: "Fecha actual"
+  book_title: "Titulo del libro"
+  book_genre: "Género de libro"
+  book_author: "Autor del libro"
