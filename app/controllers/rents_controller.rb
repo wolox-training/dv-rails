@@ -3,7 +3,7 @@ class RentsController < ApplicationController
   def create
     rent = Rent.new(rent_params)
     if rent.save
-      RentNotificationWorkerWorker.perform_async(rent.id)
+      RentNotificationWorker.perform_async(rent.id)
       render json: rent, status: :created
     else
       render json: { error: rent.errors.messages }, status: :unprocessable_entity
