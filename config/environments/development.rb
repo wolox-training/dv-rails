@@ -41,7 +41,7 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
-  config.active_record.migration_error = :page_load
+  config.active_record.migration_error = :page_loadÍ
 
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
@@ -63,11 +63,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => Rails.application.secrets.user_name,
-    :password => Rails.application.secrets.password,
-    :address => Rails.application.secrets.address,
-    :domain => Rails.application.secrets.domain,
-    :port => Rails.application.secrets.port,
-    :authentication => Rails.application.secrets.authentication.to_sym
+    user_name: Rails.application.secrets.user_name,
+    password: Rails.application.secrets.password,
+    address: Rails.application.secrets.address,
+    domain: Rails.application.secrets.domain,
+    port: Rails.application.secrets.port,
+    authentication: Rails.application.secrets.authentication.to_sym
   }
 end
