@@ -1,4 +1,4 @@
-class BooksController < ApplicationController
+class BooksController < ApiController
   include Wor::Paginate
 
   def show

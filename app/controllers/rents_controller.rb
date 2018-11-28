@@ -1,4 +1,4 @@
-class RentsController < ApplicationController
+class RentsController < ApiController
   include Wor::Paginate
   def create
     rent = Rent.new(rent_params)
