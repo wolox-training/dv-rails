@@ -29,3 +29,4 @@
 # Ignore la carpetas test, solicitud echa en la car del training
 /test
 .env
+dump.rdb

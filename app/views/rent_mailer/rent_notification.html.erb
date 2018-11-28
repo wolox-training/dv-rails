@@ -1,10 +1,30 @@
-<h1>Rent#send</h1>
-<p>
-  Hi <%= @rent.user.first_name %>, find me in app/views/rent_mailer/send.html.erb
-  <%= @rent.start_date %>
-  <%= @rent.end_date %>
-  <%= @current_date %>  
-  <%= @rent.book.title %>
-  <%= @rent.book.genre %>
-  <%= @rent.book.author %>
-</p>
+<h1>Rent book</h1>
+<ul>
+  <li>
+    <p><%= t('greeting', people: @rent.user.first_name) %></p> 
+  </li>
+
+  <li>
+    <p> <%= t('start_date', start_date: @rent.start_date) %></p> 
+  </li>
+
+  <li> 
+    <p><%= t('end_date', end_date: @rent.end_date) %></p> 
+  </li>
+
+  <li>
+    <p> <%= t('current_date', current_date: @current_date) %> </p> 
+  </li>
+
+  <li>
+    <p> <%= t('book_title', book_title: @rent.book.title) %> </p>
+  </li>
+
+  <li>
+    <p> <%= t('book_genre', book_genre: @rent.book.genre) %> </p>
+  </li>
+
+  <li>
+    <p> <%= t('book_author', book_author: @rent.book.author) %> </p> 
+  </li>
+</ul>
