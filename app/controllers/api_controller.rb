@@ -7,6 +7,6 @@ class ApiController < ApplicationController
   rescue_from ActionController::ParameterMissing, with: :missing_parameter
 
   def user_not_authorized
-     render json: { error: 'user not authorized' }, status: :forbidden
-  end 
+    render json: { error: 'user not authorized' }, status: :forbidden
+  end
 end

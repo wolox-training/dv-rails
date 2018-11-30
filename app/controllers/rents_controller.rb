@@ -1,7 +1,6 @@
 class RentsController < ApiController
   include Wor::Paginate
   def create
-
     rent = Rent.new(rent_params.merge(user_id: params[:user_id]))
     authorize rent
 
