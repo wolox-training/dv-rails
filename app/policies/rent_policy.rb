@@ -1,5 +1,9 @@
 class RentPolicy < ApplicationPolicy
   def create?
-    record.user_id == user.id
+    user.present? && record.user == user
+  end
+
+  def index?
+    record.id == user.id
   end
 end

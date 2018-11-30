@@ -13,7 +13,7 @@ class RentsController < ApiController
   end
 
   def index
-    authorize user_id, policy_class: UserPolicy
+    authorize User.find(params[:user_id]), policy_class: RentPolicy
     rents = Rent.where(user_id: params[:user_id])
     render_paginated rents
   end
