@@ -5,7 +5,7 @@ class RentsController < ApiController
     authorize rent
 
     if rent.save
-      RentWorker.perform_async(rent.id)
+      RentNotificationWorker.perform_async(rent.id)
       render json: rent, status: :created
     else
       render json: { error: rent.errors.messages }, status: :unprocessable_entity
