@@ -16,6 +16,8 @@ class RentsController < ApiController
     authorize User.find(params[:user_id]), policy_class: RentPolicy
     rents = Rent.where(user_id: params[:user_id])
     render_paginated rents
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: "El usuario con el id #{params[:user_id]}no existe" }, status: :not_found
   end
 
   private
