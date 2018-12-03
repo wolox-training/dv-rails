@@ -40,7 +40,7 @@ gem 'rails-i18n', '~> 5.1.2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'sidekiq', '~> 5.2.3'
-
+gem "pundit", '~> 2.0.0'
 # se usa intslata la ge,a de rubocop emn el proyecto
 gem 'rubocop', '~> 0.60.0', require: false
 gem 'factory_bot_rails', '~> 4.11'
