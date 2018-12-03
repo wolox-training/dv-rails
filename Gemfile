@@ -44,7 +44,7 @@ gem "pundit", '~> 2.0.0'
 # se usa intslata la ge,a de rubocop emn el proyecto
 gem 'rubocop', '~> 0.60.0', require: false
 gem 'factory_bot_rails', '~> 4.11'
-
+gem 'httparty','~> 0.16.3'
 gem 'activeadmin', '~> 1.4.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
