@@ -8,3 +8,4 @@ es:
   book_author: "Autor del libro: %{book_a}"
   isbn_error: "No existe el isbn: %{code}"
   book_error: "El libro con el id %{code} no existe"  
+
