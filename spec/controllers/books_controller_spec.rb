@@ -1,6 +1,6 @@
 require 'rails_helper'
-
 describe BooksController do
+  include_context 'Authenticated User'
   describe 'GET #index' do
     subject(:index_request) { get :index }
 
@@ -8,6 +8,7 @@ describe BooksController do
 
     it 'returns with the books json' do
       expect(JSON.parse(index_request.body)['total_count']).to eq(Book.all.count)
+      expect(JSON.parse(index_request.body)['count']).to eq(25)
     end
 
     it 'responds with 200 status' do
@@ -41,6 +42,26 @@ describe BooksController do
 
       it 'responds with 404 if the book do not founded ' do
         expect(show_request).to have_http_status(:not_found)
+      end
+    end
+  end
+
+  describe 'GET #info_book' do
+    subject(:info_book_request) do
+      get :info_book, params: { isbn: isbn }
+    end
+
+    let(:isbn) { '0385472579' }
+
+    it 'responds with 200 status if book info exist' do
+      expect(info_book_request).to have_http_status(:ok)
+    end
+
+    context 'When fetching a book info that not exist' do
+      let(:isbn) { -1 }
+
+      it 'responds with 404 if the book info do not exist' do
+        expect(info_book_request).to have_http_status(:not_found)
       end
     end
   end
