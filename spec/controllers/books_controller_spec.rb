@@ -1,6 +1,6 @@
 require 'rails_helper'
-
 describe BooksController do
+  include_context 'Authenticated User'
   describe 'GET #index' do
     subject(:index_request) { get :index }
 
@@ -8,6 +8,7 @@ describe BooksController do
 
     it 'returns with the books json' do
       expect(JSON.parse(index_request.body)['total_count']).to eq(Book.all.count)
+      expect(JSON.parse(index_request.body)['count']).to eq(25)
     end
 
     it 'responds with 200 status' do

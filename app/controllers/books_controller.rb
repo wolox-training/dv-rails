@@ -8,7 +8,6 @@ class BooksController < ApiController
   end
 
   def index
-    @books = Book.all
-    render_paginated @books
+    render_paginated Book.all
   end
 end

@@ -1,5 +1,6 @@
 require 'rails_helper'
 describe BookSuggestionsController do
+  include_context 'Authenticated User'
   describe 'POST #create' do
     subject(:create_request) { post :create, params: params }
     context 'When fetching a specific book' do
