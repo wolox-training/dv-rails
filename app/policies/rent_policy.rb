@@ -4,6 +4,6 @@ class RentPolicy < ApplicationPolicy
   end
 
   def index?
-    record.id == user.id
+    user.present? && record.id == user.id
   end
 end
