@@ -10,7 +10,7 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Show full error reports.
   config.consider_all_requests_local = true
 
@@ -63,11 +63,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :user_name => Rails.application.secrets.user_name,
-    :password => Rails.application.secrets.password,
-    :address => Rails.application.secrets.address,
-    :domain => Rails.application.secrets.domain,
-    :port => Rails.application.secrets.port,
-    :authentication => Rails.application.secrets.authentication.to_sym
+    user_name: Rails.application.secrets.user_name,
+    password: Rails.application.secrets.password,
+    address: Rails.application.secrets.address,
+    domain: Rails.application.secrets.domain,
+    port: Rails.application.secrets.port,
+    authentication: Rails.application.secrets.authentication.to_sym
   }
 end
