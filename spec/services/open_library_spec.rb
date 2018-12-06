@@ -41,12 +41,11 @@ describe OpenLibraryService do
       }.to_json
 
       it 'answer with a json if there is information from the book' do
-        expect(JSON.parse(info_book.body)).to eq({"ISBN":"0385472579",
-                                                  "title":"Zen speaks",
-                                                  "subtitle":"shouts of nothingness",
-                                                  "number_of_pages":159,
-                                                  "authors":["Zhizhong Cai"]})
-
+        expect(JSON.parse(info_book.body)).to eq("ISBN": '0385472579',
+                                                 "title": 'Zen speaks',
+                                                 "subtitle": 'shouts of nothingness',
+                                                 "number_of_pages": 159,
+                                                 "authors": ['Zhizhong Cai'])
       end
 
       context 'When fetching a book info that not exist' do
