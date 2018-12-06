@@ -6,7 +6,7 @@ describe OpenLibraryService do
         .to_return(body: hash_book_info)
     end
 
-    subject(:info_book_request) do
+    subject(:info_book) do
       OpenLibraryService.new(isbn).book_info
     end
 
@@ -40,15 +40,20 @@ describe OpenLibraryService do
                                'publish_places' => [{ 'name' => 'New York' }] }
       }.to_json
 
-      it 'responds with 200 status if book info exist' do
-        expect(info_book_request).to have_http_status(:ok)
+      it 'answer with a json if there is information from the book' do
+        expect(JSON.parse(info_book.body)).to eq({"ISBN":"0385472579",
+                                                  "title":"Zen speaks",
+                                                  "subtitle":"shouts of nothingness",
+                                                  "number_of_pages":159,
+                                                  "authors":["Zhizhong Cai"]})
+
       end
 
       context 'When fetching a book info that not exist' do
         let(:isbn) { -1 }
         let(:hash_book_info) { {} }
         it 'responds with 404 if the book info do not exist' do
-          expect(info_book_request).to have_http_status(:not_found)
+          expect(JSON.parse(info_book.body)).to eq({})
         end
       end
     end
