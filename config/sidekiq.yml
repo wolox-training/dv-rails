@@ -1,5 +1,5 @@
 :schedule:
   notify_rent:
-    cron: '* * * * * *' #'0 9 * * * * America/Santiago'
+    cron: '0 9 * * * * America/Santiago'
     class: NotifyRentWorker
       
