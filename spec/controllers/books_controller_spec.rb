@@ -47,11 +47,24 @@ describe BooksController do
   end
 
   describe 'GET #info_book' do
+    before do
+      allow_any_instance_of(OpenLibraryService).to receive(:book_info).and_return(hash_book_info)
+    end
+
     subject(:info_book_request) do
       get :info_book, params: { isbn: isbn }
     end
 
     let(:isbn) { '0385472579' }
+    let(:hash_book_info) do
+      {
+        ISBN: Faker::Number.number(10),
+        title: Faker::Book.title,
+        subtitle: Faker::Book.title,
+        number_of_pages: Faker::Number.number(3),
+        authors: Faker::Book.author
+      }
+    end
 
     it 'responds with 200 status if book info exist' do
       expect(info_book_request).to have_http_status(:ok)
@@ -59,6 +72,7 @@ describe BooksController do
 
     context 'When fetching a book info that not exist' do
       let(:isbn) { -1 }
+      let(:hash_book_info) { {} }
 
       it 'responds with 404 if the book info do not exist' do
         expect(info_book_request).to have_http_status(:not_found)
