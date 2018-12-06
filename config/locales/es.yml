@@ -9,4 +9,3 @@ es:
   isbn_error: "No existe el isbn: %{code}"
   book_error: "El libro con el id %{code} no existe"
   message: "Hola! %{name}, su alquiler ha vencido"
-

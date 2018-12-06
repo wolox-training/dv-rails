@@ -9,3 +9,4 @@ en:
   isbn_error: "There is no ISBN: %{code}"
   book_error: "The book with the id %{code} does not exist"
   message: "Hello! %{name}, your rent has expired"
+  
