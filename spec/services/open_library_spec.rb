@@ -12,33 +12,7 @@ describe OpenLibraryService do
 
     let(:isbn) { '0385472579' }
     let(:hash_book_info) do
-      {
-        '0385472579' => { 'publishers' => [{ 'name' => 'Anchor Books' }],
-                          'pagination' => '159 p. :',
-                          'identifiers' => { 'lccn' => ['93005405'],
-                                             'openlibrary' => ['OL1397864M'],
-                                             'isbn_10' => ['0385472579'],
-                                             'librarything' => ['192819'],
-                                             'goodreads' => ['979250'] },
-                          'subtitle' => 'shouts of nothingness',
-                          'title' => 'Zen speaks',
-                          'url' => 'https://openlibrary.org/books/OL1397864M/Zen_speaks',
-                          'number_of_pages' => 159,
-                          'cover' => { 'small' => 'https://covers.openlibrary.org/b/id/-S.jp',
-                                       'large' => 'https://covers.openlibrary.org/b/id/-L.jg',
-                                       'medium' => 'https://covers.openlibrary.org/b/i-M.g' },
-                          'subjects' => [{ 'url' => 'https://openlibrary.org/subjects/',
-                                           'name' => 'Caricatures and cartoons' },
-                                         { 'url' => 'https://openlibrary.org/subjects/',
-                                           'name' => 'Zen Buddhism' }],
-                          'publish_date' => '1994',
-                          'key' => '/books/OL1397864M',
-                          'authors' => [{ 'url' => 'https://openlibrary.org/autho/Zhizhg_Cai',
-                                          'name' => 'Zhizhong Cai' }],
-                          'classifications' => { 'dewey_decimal_class' => ['294.3/927'],
-                                                 'lc_classifications' => ['BQ926.T7311994'] },
-                          'publish_places' => [{ 'name' => 'New York' }] }
-      }.to_json
+      File.read Rails.root.join('spec', 'support', 'fixtures', 'book_info.json')
     end
 
     it 'answer with a json if there is information from the book' do
