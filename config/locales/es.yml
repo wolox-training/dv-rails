@@ -6,3 +6,5 @@ es:
   book_title: "Título del libro: %{book_title}"
   book_genre: "Género de libro: %{book_genre}"
   book_author: "Autor del libro: %{book_author}"
+  isbn_error: "No existe el isbn: %{code}"
+  book_error: "El libro con el id %{code} no existe"

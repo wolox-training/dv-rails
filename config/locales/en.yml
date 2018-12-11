@@ -6,3 +6,5 @@ en:
   book_title: "Book title: %{book_title}"
   book_genre: "Book genre: %{book_genre}"
   book_author: "Book author: %{book_author}"
+  isbn_error: "There is no ISBN: %{code}"
+  book_error: "The book with the id %{code} does not exist"
