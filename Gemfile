@@ -46,6 +46,7 @@ gem 'rubocop', '~> 0.60.0', require: false
 gem 'factory_bot_rails', '~> 4.11'
 gem 'httparty','~> 0.16.3'
 gem 'activeadmin', '~> 1.4.2'
+gem 'webmock', '~> 3.4.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
