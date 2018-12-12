@@ -1,0 +1,18 @@
+<h1>notify rent book</h1>
+<ul>
+  <li>
+    <p><%= t('message', name: @rent.user.first_name) %></p> 
+  </li>
+
+  <li>
+    <p> <%= t('book_title', book_title: @rent.book.title) %> </p>
+  </li>
+
+  <li>
+    <p> <%= t('start_date', start_date: @rent.start_date) %></p> 
+  </li>
+
+  <li> 
+    <p><%= t('end_date', end_date: @rent.end_date) %></p> 
+  </li>
+</ul>
